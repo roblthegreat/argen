@@ -25,7 +25,8 @@ Create classes and code to simplify insertion of ActiveRecord into a Xojo projec
 # Modifications
 
 - version without plugins, references to MBS plugins, and to Einhugur WindowSplitter
-  plugin removed, added [imSplitter](https://github.com/oleman108/imSplitter)
+  plugin removed
 - build settings for Linux added
-- tested on Linux (Ubuntu 20.04) only
+- tested on Linux (Ubuntu 20.04) and Windows 10 only (not very intense, but it starts, 
+  connects to sqlite, generates project). 
 
