@@ -21,3 +21,11 @@ Create classes and code to simplify insertion of ActiveRecord into a Xojo projec
 //LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 //SOFTWARE.
+
+# Modifications
+
+- version without plugins, references to MBS plugins, and to Einhugur WindowSplitter
+  plugin removed, added [imSplitter](https://github.com/oleman108/imSplitter)
+- build settings for Linux added
+- tested on Linux (Ubuntu 20.04) only
+
