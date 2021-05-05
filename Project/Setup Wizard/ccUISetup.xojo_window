@@ -24,7 +24,7 @@ Begin ContainerControl ccUISetup
    Transparent     =   True
    UseFocusRing    =   False
    Visible         =   True
-   Width           =   700
+   Width           =   784
    Begin PagePanel ppMain
       AutoDeactivate  =   True
       Enabled         =   True
@@ -43,12 +43,11 @@ Begin ContainerControl ccUISetup
       Scope           =   2
       TabIndex        =   6
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Top             =   0
       Transparent     =   False
       Value           =   0
       Visible         =   True
-      Width           =   480
+      Width           =   564
       Begin AlternatingList lbControls
          AutoDeactivate  =   True
          AutoHideScrollbars=   True
@@ -97,7 +96,7 @@ Begin ContainerControl ccUISetup
          Underline       =   False
          UseFocusRing    =   False
          Visible         =   True
-         Width           =   480
+         Width           =   564
          _ScrollOffset   =   0
          _ScrollWidth    =   -1
       End
@@ -255,7 +254,6 @@ Begin ContainerControl ccUISetup
       Width           =   20
    End
    Begin Timer tmrReorder
-      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Mode            =   0
@@ -276,7 +274,7 @@ Begin ContainerControl ccUISetup
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   580
+      Left            =   664
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -328,7 +326,7 @@ Begin ContainerControl ccUISetup
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   480
+      Width           =   564
    End
    Begin CheckBox chkLocalize
       AutoDeactivate  =   True
@@ -391,47 +389,6 @@ Begin ContainerControl ccUISetup
       Transparent     =   False
       Visible         =   True
       Width           =   178
-   End
-   Begin imSplitter imSplitterMain
-      AllowAutoDeactivate=   True
-      AllowFocus      =   False
-      AllowFocusRing  =   True
-      AllowTabs       =   False
-      Backdrop        =   0
-      DockAfter       =   True
-      DockAfterSize   =   40
-      DockBefore      =   True
-      DockBeforeSize  =   40
-      DoubleBuffer    =   True
-      DoubleClickAction=   0
-      DrawHandles     =   False
-      Enabled         =   True
-      HandlesColor    =   &c00000000
-      HasBackColor    =   False
-      Height          =   291
-      Index           =   -2147483648
-      InitialParent   =   ""
-      IsDocked        =   False
-      IsDockedPosition=   ""
-      Left            =   205
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MinAfterArea    =   20
-      MinBeforeArea   =   30
-      PositionBeforeDock=   0
-      Scope           =   0
-      SplitterColor   =   &c00000000
-      TabIndex        =   9
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   30
-      Transparent     =   True
-      Visible         =   True
-      Width           =   10
    End
 End
 #tag EndWindow
@@ -931,14 +888,6 @@ End
 	#tag Event
 		Sub TextChanged()
 		  LoadList
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events imSplitterMain
-	#tag Event
-		Sub Open()
-		  Me.AddControl(lbTables, True)
-		  Me.AddControl(lbControls, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

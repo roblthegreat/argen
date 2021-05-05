@@ -24,7 +24,7 @@ Begin ContainerControl ccRelationships
    Transparent     =   True
    UseFocusRing    =   False
    Visible         =   True
-   Width           =   700
+   Width           =   794
    Begin TableListbox lbTables
       AutoDeactivate  =   True
       AutoHideScrollbars=   True
@@ -143,7 +143,7 @@ Begin ContainerControl ccRelationships
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   480
+      Width           =   574
    End
    Begin CheckBox chkShowAllTables
       AutoDeactivate  =   True
@@ -226,7 +226,7 @@ Begin ContainerControl ccRelationships
       Underline       =   False
       UseFocusRing    =   False
       Visible         =   True
-      Width           =   480
+      Width           =   574
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
@@ -255,7 +255,7 @@ Begin ContainerControl ccRelationships
       Transparent     =   True
       UseFocusRing    =   True
       Visible         =   True
-      Width           =   497
+      Width           =   591
       Begin WindowsButton btnAddRelationship
          AutoDeactivate  =   True
          Bold            =   False
@@ -301,7 +301,7 @@ Begin ContainerControl ccRelationships
          Index           =   -2147483648
          InitialParent   =   "cvsStatusbarButtons"
          Italic          =   False
-         Left            =   620
+         Left            =   714
          LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   False
@@ -333,7 +333,7 @@ Begin ContainerControl ccRelationships
          Index           =   -2147483648
          InitialParent   =   "cvsStatusbarButtons"
          Italic          =   False
-         Left            =   528
+         Left            =   622
          LockBottom      =   True
          LockedInPosition=   False
          LockLeft        =   False
@@ -381,47 +381,6 @@ Begin ContainerControl ccRelationships
       Transparent     =   False
       Visible         =   True
       Width           =   178
-   End
-   Begin imSplitter imSplitterMain
-      AllowAutoDeactivate=   True
-      AllowFocus      =   False
-      AllowFocusRing  =   True
-      AllowTabs       =   False
-      Backdrop        =   0
-      DockAfter       =   True
-      DockAfterSize   =   40
-      DockBefore      =   True
-      DockBeforeSize  =   40
-      DoubleBuffer    =   True
-      DoubleClickAction=   0
-      DrawHandles     =   False
-      Enabled         =   True
-      HandlesColor    =   &c00000000
-      HasBackColor    =   False
-      Height          =   290
-      Index           =   -2147483648
-      InitialParent   =   ""
-      IsDocked        =   False
-      IsDockedPosition=   ""
-      Left            =   204
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MinAfterArea    =   20
-      MinBeforeArea   =   30
-      PositionBeforeDock=   0
-      Scope           =   0
-      SplitterColor   =   &c00000000
-      TabIndex        =   9
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   30
-      Transparent     =   True
-      Visible         =   True
-      Width           =   10
    End
 End
 #tag EndWindow
@@ -812,14 +771,6 @@ End
 	#tag Event
 		Sub TextChanged()
 		  LoadList
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events imSplitterMain
-	#tag Event
-		Sub Open()
-		  Me.AddControl(lbTables, True)
-		  Me.AddControl(lbKeys, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

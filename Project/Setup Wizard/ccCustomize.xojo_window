@@ -24,7 +24,7 @@ Begin ContainerControl ccCustomize
    Transparent     =   True
    UseFocusRing    =   False
    Visible         =   True
-   Width           =   600
+   Width           =   714
    Begin Listbox lbClassTemplate
       AutoDeactivate  =   True
       AutoHideScrollbars=   True
@@ -110,7 +110,7 @@ Begin ContainerControl ccCustomize
       Transparent     =   False
       Underline       =   False
       Visible         =   True
-      Width           =   376
+      Width           =   490
    End
    Begin LinkLabel lblHelp
       AutoDeactivate  =   True
@@ -123,7 +123,7 @@ Begin ContainerControl ccCustomize
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   368
+      Left            =   482
       LinkURL         =   ""
       LockBottom      =   False
       LockedInPosition=   False
@@ -160,7 +160,6 @@ Begin ContainerControl ccCustomize
       HasBackColor    =   False
       Height          =   24
       HelpTag         =   ""
-      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   0
       LockBottom      =   True
@@ -196,12 +195,11 @@ Begin ContainerControl ccCustomize
       Scope           =   2
       TabIndex        =   5
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Top             =   32
       Transparent     =   False
       Value           =   0
       Visible         =   True
-      Width           =   380
+      Width           =   494
       Begin Label lblNoSelection
          AutoDeactivate  =   True
          Bold            =   False
@@ -235,7 +233,7 @@ Begin ContainerControl ccCustomize
          Transparent     =   False
          Underline       =   False
          Visible         =   True
-         Width           =   340
+         Width           =   454
       End
       Begin ccConstantTemplate ctlEditConstant
          AcceptFocus     =   False
@@ -249,7 +247,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -265,7 +262,7 @@ Begin ContainerControl ccCustomize
          Transparent     =   True
          UseFocusRing    =   False
          Visible         =   True
-         Width           =   380
+         Width           =   494
       End
       Begin ccEventTemplate ctlEditEvent
          AcceptFocus     =   False
@@ -279,7 +276,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -295,7 +291,7 @@ Begin ContainerControl ccCustomize
          Transparent     =   True
          UseFocusRing    =   False
          Visible         =   True
-         Width           =   380
+         Width           =   494
       End
       Begin ccMethodTemplate ctlEditMethod
          AcceptFocus     =   False
@@ -309,7 +305,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -325,7 +320,7 @@ Begin ContainerControl ccCustomize
          Transparent     =   True
          UseFocusRing    =   False
          Visible         =   True
-         Width           =   370
+         Width           =   484
       End
       Begin ccPropertyTemplate ctlEditProperty
          AcceptFocus     =   False
@@ -339,7 +334,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   False
@@ -355,49 +349,8 @@ Begin ContainerControl ccCustomize
          Transparent     =   True
          UseFocusRing    =   False
          Visible         =   True
-         Width           =   380
+         Width           =   494
       End
-   End
-   Begin imSplitter imSplitterMain
-      AllowAutoDeactivate=   True
-      AllowFocus      =   False
-      AllowFocusRing  =   True
-      AllowTabs       =   False
-      Backdrop        =   0
-      DockAfter       =   True
-      DockAfterSize   =   40
-      DockBefore      =   True
-      DockBeforeSize  =   40
-      DoubleBuffer    =   True
-      DoubleClickAction=   0
-      DrawHandles     =   False
-      Enabled         =   True
-      HandlesColor    =   &c00000000
-      HasBackColor    =   False
-      Height          =   231
-      Index           =   -2147483648
-      InitialParent   =   ""
-      IsDocked        =   False
-      IsDockedPosition=   ""
-      Left            =   205
-      LockBottom      =   False
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MinAfterArea    =   20
-      MinBeforeArea   =   30
-      PositionBeforeDock=   0
-      Scope           =   2
-      SplitterColor   =   &c00000000
-      TabIndex        =   6
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Tooltip         =   ""
-      Top             =   30
-      Transparent     =   True
-      Visible         =   True
-      Width           =   10
    End
 End
 #tag EndWindow
@@ -1227,14 +1180,6 @@ End
 	#tag Event
 		Sub NameChanged()
 		  InvalidateRow
-		End Sub
-	#tag EndEvent
-#tag EndEvents
-#tag Events imSplitterMain
-	#tag Event
-		Sub Open()
-		  Me.AddControl(lbClassTemplate, True)
-		  Me.AddControl(ppEditor, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

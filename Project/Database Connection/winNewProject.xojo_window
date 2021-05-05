@@ -43,7 +43,6 @@ Begin Window winNewProject
       Scope           =   2
       TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Top             =   20
       Transparent     =   False
       Value           =   0
@@ -61,7 +60,6 @@ Begin Window winNewProject
          HasBackColor    =   False
          Height          =   180
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   240
          LockBottom      =   False
@@ -92,7 +90,6 @@ Begin Window winNewProject
          HasBackColor    =   False
          Height          =   240
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   240
          LockBottom      =   False
@@ -122,7 +119,6 @@ Begin Window winNewProject
          HasBackColor    =   False
          Height          =   195
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   240
          LockBottom      =   False
