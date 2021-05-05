@@ -196,7 +196,7 @@ Begin ContainerControl ccCustomize
       Scope           =   2
       TabIndex        =   5
       TabPanelIndex   =   0
-      TabStop         =   True
+      TabStop         =   "True"
       Top             =   32
       Transparent     =   False
       Value           =   0

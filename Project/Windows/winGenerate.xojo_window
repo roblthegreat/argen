@@ -135,10 +135,10 @@ End
 	#tag Event
 		Sub Close()
 		  // Clear taskbar tile progress
-		  #if TargetWindows then
-		    moWindowsTaskBar.SetProgressState(muiWindowsHandle, WindowsTaskbarListMBS.ProgressStateFlagNoProgress)
-		    
-		  #endif
+		  // #if TargetWindows then
+		  // moWindowsTaskBar.SetProgressState(muiWindowsHandle, WindowsTaskbarListMBS.ProgressStateFlagNoProgress)
+		  // 
+		  // #endif
 		End Sub
 	#tag EndEvent
 
@@ -159,8 +159,8 @@ End
 		  
 		  #if TargetWindows then
 		    muiWindowsHandle = toAttach.Handle
-		    moWindowsTaskBar = new WindowsTaskbarListMBS
-		    moWindowsTaskBar.SetProgressState(muiWindowsHandle, WindowsTaskbarListMBS.ProgressStateFlagNormal)
+		    //moWindowsTaskBar = New WindowsTaskbarListMBS
+		    //moWindowsTaskBar.SetProgressState(muiWindowsHandle, WindowsTaskbarListMBS.ProgressStateFlagNormal)
 		    
 		  #endif
 		  
@@ -211,10 +211,10 @@ End
 		    pbWait.Value = dictUpdate.Value("ProgressValue")
 		    
 		    // Taskbar tile progress
-		    #if TargetWindows then
-		      moWindowsTaskBar.SetProgressValue(muiWindowsHandle, pbWait.Value, pbWait.Maximum)
-		      
-		    #endif
+		    // #if TargetWindows then
+		    // moWindowsTaskBar.SetProgressValue(muiWindowsHandle, pbWait.Value, pbWait.Maximum)
+		    // 
+		    // #endif
 		    
 		  end
 		End Sub
