@@ -160,6 +160,7 @@ Begin ContainerControl ccCustomize
       HasBackColor    =   False
       Height          =   24
       HelpTag         =   ""
+      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   0
       LockBottom      =   True
@@ -176,39 +177,6 @@ Begin ContainerControl ccCustomize
       UseFocusRing    =   False
       Visible         =   True
       Width           =   50
-   End
-   Begin WindowSplitter ctlSplitter
-      AutoDeactivate  =   True
-      CursorSmoothing =   True
-      DockAfter       =   False
-      DockAfterSize   =   40
-      DockBefore      =   False
-      DockBeforeSize  =   40
-      DoubleClickAction=   0
-      Enabled         =   True
-      Height          =   239
-      HelpTag         =   ""
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Left            =   203
-      LinuxStyle      =   3
-      LockBottom      =   True
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MacStyle        =   3
-      MinAfterArea    =   380
-      MinBeforeArea   =   200
-      Scope           =   2
-      TabIndex        =   4
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Top             =   26
-      Visible         =   True
-      Width           =   14
-      WinLiveMove     =   True
-      WinStyle        =   1
    End
    Begin PagePanel ppEditor
       AutoDeactivate  =   True
@@ -228,6 +196,7 @@ Begin ContainerControl ccCustomize
       Scope           =   2
       TabIndex        =   5
       TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   32
       Transparent     =   False
       Value           =   0
@@ -280,6 +249,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -309,6 +279,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -338,6 +309,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -367,6 +339,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   False
@@ -384,6 +357,47 @@ Begin ContainerControl ccCustomize
          Visible         =   True
          Width           =   380
       End
+   End
+   Begin imSplitter imSplitterMain
+      AllowAutoDeactivate=   True
+      AllowFocus      =   False
+      AllowFocusRing  =   True
+      AllowTabs       =   False
+      Backdrop        =   0
+      DockAfter       =   True
+      DockAfterSize   =   40
+      DockBefore      =   True
+      DockBeforeSize  =   40
+      DoubleBuffer    =   True
+      DoubleClickAction=   0
+      DrawHandles     =   False
+      Enabled         =   True
+      HandlesColor    =   &c00000000
+      HasBackColor    =   False
+      Height          =   231
+      Index           =   -2147483648
+      InitialParent   =   ""
+      IsDocked        =   False
+      IsDockedPosition=   ""
+      Left            =   205
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MinAfterArea    =   20
+      MinBeforeArea   =   30
+      PositionBeforeDock=   0
+      Scope           =   2
+      SplitterColor   =   &c00000000
+      TabIndex        =   6
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   30
+      Transparent     =   True
+      Visible         =   True
+      Width           =   10
    End
 End
 #tag EndWindow
@@ -1188,14 +1202,6 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events ctlSplitter
-	#tag Event
-		Sub Open()
-		  me.AddControl(lbClassTemplate, true)
-		  me.AddControl(ppEditor, false)
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag Events ctlEditConstant
 	#tag Event
 		Sub NameChanged()
@@ -1221,6 +1227,14 @@ End
 	#tag Event
 		Sub NameChanged()
 		  InvalidateRow
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events imSplitterMain
+	#tag Event
+		Sub Open()
+		  Me.AddControl(lbClassTemplate, True)
+		  Me.AddControl(ppEditor, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

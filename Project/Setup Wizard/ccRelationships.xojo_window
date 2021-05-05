@@ -110,39 +110,6 @@ Begin ContainerControl ccRelationships
       Visible         =   True
       Width           =   20
    End
-   Begin WindowSplitter ctlSplitter
-      AutoDeactivate  =   True
-      CursorSmoothing =   True
-      DockAfter       =   False
-      DockAfterSize   =   40
-      DockBefore      =   False
-      DockBeforeSize  =   40
-      DoubleClickAction=   0
-      Enabled         =   True
-      Height          =   300
-      HelpTag         =   ""
-      Index           =   -2147483648
-      InitialParent   =   ""
-      Left            =   203
-      LinuxStyle      =   3
-      LockBottom      =   True
-      LockedInPosition=   False
-      LockLeft        =   True
-      LockRight       =   False
-      LockTop         =   True
-      MacStyle        =   3
-      MinAfterArea    =   380
-      MinBeforeArea   =   200
-      Scope           =   2
-      TabIndex        =   4
-      TabPanelIndex   =   0
-      TabStop         =   True
-      Top             =   26
-      Visible         =   True
-      Width           =   14
-      WinLiveMove     =   True
-      WinStyle        =   1
-   End
    Begin Label lblTableName
       AutoDeactivate  =   True
       Bold            =   True
@@ -415,6 +382,47 @@ Begin ContainerControl ccRelationships
       Visible         =   True
       Width           =   178
    End
+   Begin imSplitter imSplitterMain
+      AllowAutoDeactivate=   True
+      AllowFocus      =   False
+      AllowFocusRing  =   True
+      AllowTabs       =   False
+      Backdrop        =   0
+      DockAfter       =   True
+      DockAfterSize   =   40
+      DockBefore      =   True
+      DockBeforeSize  =   40
+      DoubleBuffer    =   True
+      DoubleClickAction=   0
+      DrawHandles     =   False
+      Enabled         =   True
+      HandlesColor    =   &c00000000
+      HasBackColor    =   False
+      Height          =   290
+      Index           =   -2147483648
+      InitialParent   =   ""
+      IsDocked        =   False
+      IsDockedPosition=   ""
+      Left            =   204
+      LockBottom      =   False
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MinAfterArea    =   20
+      MinBeforeArea   =   30
+      PositionBeforeDock=   0
+      Scope           =   0
+      SplitterColor   =   &c00000000
+      TabIndex        =   9
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   30
+      Transparent     =   True
+      Visible         =   True
+      Width           =   10
+   End
 End
 #tag EndWindow
 
@@ -661,25 +669,6 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events ctlSplitter
-	#tag Event
-		Sub Open()
-		  me.AddControl(txtSearch, true)
-		  me.AddControl(lbTables, true)
-		  me.AddControl(lblTableName, false)
-		  me.AddControl(lbKeys, false)
-		End Sub
-	#tag EndEvent
-	#tag Event
-		Sub SplitterMoved(X as Integer,Y as Integer)
-		  #pragma unused x
-		  #pragma unused y
-		  
-		  cvsStatusbarButtons.Left = me.Left
-		  cvsStatusbarButtons.Width = self.Width - cvsStatusbarButtons.Left
-		End Sub
-	#tag EndEvent
-#tag EndEvents
 #tag Events chkShowAllTables
 	#tag Event
 		Sub Action()
@@ -823,6 +812,14 @@ End
 	#tag Event
 		Sub TextChanged()
 		  LoadList
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events imSplitterMain
+	#tag Event
+		Sub Open()
+		  Me.AddControl(lbTables, True)
+		  Me.AddControl(lbKeys, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

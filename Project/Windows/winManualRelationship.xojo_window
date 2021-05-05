@@ -123,6 +123,7 @@ Begin Window winManualRelationship
       HasBackColor    =   False
       Height          =   27
       HelpTag         =   ""
+      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   672
       LockBottom      =   True
@@ -227,7 +228,7 @@ Begin Window winManualRelationship
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
-   Begin imSplitter imSplitter1
+   Begin imSplitter imSplitterMain
       AllowAutoDeactivate=   True
       AllowFocus      =   False
       AllowFocusRing  =   True
@@ -246,6 +247,8 @@ Begin Window winManualRelationship
       Height          =   260
       Index           =   -2147483648
       InitialParent   =   ""
+      IsDocked        =   False
+      IsDockedPosition=   ""
       Left            =   303
       LockBottom      =   False
       LockedInPosition=   False
@@ -254,6 +257,7 @@ Begin Window winManualRelationship
       LockTop         =   True
       MinAfterArea    =   20
       MinBeforeArea   =   30
+      PositionBeforeDock=   0
       Scope           =   0
       SplitterColor   =   &c00000000
       TabIndex        =   6
@@ -594,11 +598,11 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events imSplitter1
+#tag Events imSplitterMain
 	#tag Event
 		Sub Open()
-		  imSplitter1.AddControl(lbSourceColumn, True)
-		  imSplitter1.AddControl(lbTargetColumn, False)
+		  Me.AddControl(lbSourceColumn, True)
+		  Me.AddControl(lbTargetColumn, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents
