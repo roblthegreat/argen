@@ -160,7 +160,6 @@ Begin ContainerControl ccCustomize
       HasBackColor    =   False
       Height          =   24
       HelpTag         =   ""
-      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   0
       LockBottom      =   True
@@ -229,7 +228,6 @@ Begin ContainerControl ccCustomize
       Scope           =   2
       TabIndex        =   5
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Top             =   32
       Transparent     =   False
       Value           =   0
@@ -282,7 +280,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -312,7 +309,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -342,7 +338,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -372,7 +367,6 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
-         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   False
@@ -1076,11 +1070,6 @@ End
 		    
 		    if IsDarkMode then
 		      g.ForeColor = &c1C1C1C
-		      
-		      if NSWorkspaceMBS.accessibilityDisplayShouldIncreaseContrast then
-		        g.ForeColor = &c272727
-		        
-		      end
 		      
 		    end
 		    

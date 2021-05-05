@@ -77,7 +77,6 @@ Begin Window winGenerate
       Scope           =   2
       TabIndex        =   1
       TabPanelIndex   =   0
-      TabStop         =   "True"
       Top             =   37
       Transparent     =   False
       Value           =   100.0
@@ -120,7 +119,6 @@ Begin Window winGenerate
       Width           =   380
    End
    Begin Timer tmrRelay
-      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Mode            =   0
@@ -227,10 +225,6 @@ End
 
 	#tag Property, Flags = &h21
 		Private moThread As ProjectGenerator.GeneratorThread
-	#tag EndProperty
-
-	#tag Property, Flags = &h21
-		Private moWindowsTaskBar As WindowsTaskbarListMBS
 	#tag EndProperty
 
 	#tag Property, Flags = &h21

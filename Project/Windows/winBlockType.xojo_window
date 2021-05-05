@@ -245,7 +245,6 @@ Begin Window winBlockType
       HasBackColor    =   False
       Height          =   27
       HelpTag         =   ""
-      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   58
       LockBottom      =   False

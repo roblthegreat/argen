@@ -15,11 +15,6 @@ Inherits Listbox
 		      if IsDarkMode then
 		        g.ForeColor = &c1C1C1C
 		        
-		        if NSWorkspaceMBS.accessibilityDisplayShouldIncreaseContrast then
-		          g.ForeColor = &c272727
-		          
-		        end
-		        
 		      end
 		      
 		    #endif

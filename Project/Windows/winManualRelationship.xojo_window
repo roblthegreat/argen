@@ -23,7 +23,7 @@ Begin Window winManualRelationship
    Title           =   "Add Manual Relationship"
    Type            =   8
    Visible         =   True
-   Width           =   600
+   Width           =   864
    Begin Label lblSource
       AutoDeactivate  =   True
       Bold            =   True
@@ -107,7 +107,7 @@ Begin Window winManualRelationship
       Underline       =   False
       UseFocusRing    =   False
       Visible         =   True
-      Width           =   200
+      Width           =   283
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
@@ -123,9 +123,8 @@ Begin Window winManualRelationship
       HasBackColor    =   False
       Height          =   27
       HelpTag         =   ""
-      Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   408
+      Left            =   672
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   False
@@ -152,7 +151,7 @@ Begin Window winManualRelationship
       Index           =   -2147483648
       InitialParent   =   ""
       Italic          =   False
-      Left            =   232
+      Left            =   315
       LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
@@ -201,7 +200,7 @@ Begin Window winManualRelationship
       InitialParent   =   ""
       InitialValue    =   ""
       Italic          =   False
-      Left            =   232
+      Left            =   315
       LockBottom      =   True
       LockedInPosition=   False
       LockLeft        =   True
@@ -224,42 +223,47 @@ Begin Window winManualRelationship
       Underline       =   False
       UseFocusRing    =   False
       Visible         =   True
-      Width           =   348
+      Width           =   529
       _ScrollOffset   =   0
       _ScrollWidth    =   -1
    End
-   Begin WindowSplitter ctlSplitter
-      AutoDeactivate  =   True
-      CursorSmoothing =   True
-      DockAfter       =   False
+   Begin imSplitter imSplitter1
+      AllowAutoDeactivate=   True
+      AllowFocus      =   False
+      AllowFocusRing  =   True
+      AllowTabs       =   False
+      Backdrop        =   0
+      DockAfter       =   True
       DockAfterSize   =   40
-      DockBefore      =   False
+      DockBefore      =   True
       DockBeforeSize  =   40
+      DoubleBuffer    =   True
       DoubleClickAction=   0
+      DrawHandles     =   False
       Enabled         =   True
+      HandlesColor    =   &c00000000
+      HasBackColor    =   False
       Height          =   260
-      HelpTag         =   ""
       Index           =   -2147483648
       InitialParent   =   ""
-      Left            =   220
-      LinuxStyle      =   3
-      LockBottom      =   True
+      Left            =   303
+      LockBottom      =   False
       LockedInPosition=   False
       LockLeft        =   True
       LockRight       =   False
       LockTop         =   True
-      MacStyle        =   3
-      MinAfterArea    =   368
-      MinBeforeArea   =   218
-      Scope           =   2
-      TabIndex        =   2
+      MinAfterArea    =   20
+      MinBeforeArea   =   30
+      Scope           =   0
+      SplitterColor   =   &c00000000
+      TabIndex        =   6
       TabPanelIndex   =   0
       TabStop         =   True
+      Tooltip         =   ""
       Top             =   42
+      Transparent     =   True
       Visible         =   True
-      Width           =   12
-      WinLiveMove     =   True
-      WinStyle        =   1
+      Width           =   10
    End
 End
 #tag EndWindow
@@ -590,11 +594,11 @@ End
 		End Sub
 	#tag EndEvent
 #tag EndEvents
-#tag Events ctlSplitter
+#tag Events imSplitter1
 	#tag Event
 		Sub Open()
-		  me.AddControl(lbSourceColumn, true)
-		  me.AddControl(lbTargetColumn, false)
+		  imSplitter1.AddControl(lbSourceColumn, True)
+		  imSplitter1.AddControl(lbTargetColumn, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

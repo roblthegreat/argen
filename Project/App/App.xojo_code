@@ -20,12 +20,6 @@ Inherits Application
 
 	#tag Event
 		Sub Open()
-		  // Register plugins
-		  if SetupPlugins = false then
-		    App.Terminate
-		    return
-		    
-		  end
 		  
 		  // Setup platform specific needs
 		  DisableMacosTabs
@@ -41,7 +35,7 @@ Inherits Application
 		    
 		  end
 		  // Now that this is all done, AutoQuit=true
-		  App.AutoQuit = TargetWindows
+		  App.AutoQuit = TargetWindows Or TargetLinux
 		  
 		End Sub
 	#tag EndEvent
@@ -178,36 +172,6 @@ Inherits Application
 	#tag EndMethod
 
 	#tag Method, Flags = &h21
-		Private Function RegisterPlugins() As Boolean
-		  // Check MBS plugin version against the obfuscated key
-		  #if  BuildConstantsMBS.Year > 2022 or _
-		    (BuildConstantsMBS.Year = 2022 and BuildConstantsMBS.Month > 11) then
-		    #pragma Error "Active MBS Plugins are newer than this license key."
-		    
-		  #endif
-		  
-		  // Don't register in debug
-		  #if DebugBuild then
-		    return true
-		    
-		  #endif
-		  
-		  var sName as String
-		  var sProd as String
-		  var sCode as String
-		  
-		  if RegisterMBSPlugin(sName, sProd, 202211, sCode) = true then
-		    return true
-		    
-		  else
-		    return false
-		    
-		  end
-		  
-		End Function
-	#tag EndMethod
-
-	#tag Method, Flags = &h21
 		Private Function SetupMainConnection() As Boolean
 		  // Connect to main database
 		  // Return false to quit
@@ -222,29 +186,6 @@ Inherits Application
 		  end
 		  
 		  return true
-		End Function
-	#tag EndMethod
-
-	#tag Method, Flags = &h21
-		Private Function SetupPlugins() As Boolean
-		  // Register plugins, or offer download
-		  // Return false to quit
-		  if RegisterPlugins = true then return true
-		  
-		  var md as new MessageDialog
-		  md.Message = "Critical Error"
-		  md.Explanation = "Failed to activate required libraries. " + _
-		  "Please download the latest version of ARGen from Strawberry Software."
-		  
-		  md.ActionButton.Caption = "Visit Website"
-		  md.CancelButton.Visible = true
-		  
-		  if md.ShowModal = md.ActionButton then
-		    ShowURL("https://strawberrysw.com/argen")
-		    
-		  end
-		  
-		  return false
 		End Function
 	#tag EndMethod
 
