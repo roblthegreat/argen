@@ -29,4 +29,5 @@ Create classes and code to simplify insertion of ActiveRecord into a Xojo projec
 - build settings for Linux added
 - tested on Linux (Ubuntu 20.04) and Windows 10 only (not very intense, but it starts, 
   connects to sqlite, generates project). 
+  If anyone would like to check if it compiles and works on macOS, please let me know, if it works or not.
 
