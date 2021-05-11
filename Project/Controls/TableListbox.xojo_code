@@ -86,19 +86,19 @@ Inherits AlternatingList
 	#tag Method, Flags = &h21
 		Private Function GetSecondaryColor(iRow as Integer) As Color
 		  // Focus, selected, white text
-		  if mbFocus = true and me.Selected(iRow) then
-		    return &cFFFFFF
+		  If mbFocus = True And Me.Selected(iRow) Then
+		    Return &cFFFFFF
 		    
-		  end
+		  End If
 		  
 		  // Alternate color
-		  #if TargetMacOS then
-		    return NSColorMBS.secondaryLabelColor.colorValue
-		    
-		  #else
-		    return &c666666
-		    
-		  #endif
+		  //#If TargetMacOS Then
+		  //Return NSColorMBS.secondaryLabelColor.colorValue
+		  
+		  //#Else
+		  Return &c666666
+		  
+		  //#endif
 		End Function
 	#tag EndMethod
 

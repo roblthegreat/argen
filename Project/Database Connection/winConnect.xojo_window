@@ -43,6 +43,7 @@ Begin Window winConnect
       Scope           =   2
       TabIndex        =   6
       TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   12
       Transparent     =   False
       Value           =   0
@@ -95,6 +96,7 @@ Begin Window winConnect
          HasBackColor    =   False
          Height          =   180
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   20
          LockBottom      =   False
@@ -125,6 +127,7 @@ Begin Window winConnect
          HasBackColor    =   False
          Height          =   240
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   20
          LockBottom      =   False
@@ -154,6 +157,7 @@ Begin Window winConnect
          HasBackColor    =   False
          Height          =   195
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppConnections"
          Left            =   20
          LockBottom      =   False

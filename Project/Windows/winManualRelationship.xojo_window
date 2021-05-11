@@ -123,6 +123,7 @@ Begin Window winManualRelationship
       HasBackColor    =   False
       Height          =   27
       HelpTag         =   ""
+      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   672
       LockBottom      =   True

@@ -309,13 +309,13 @@ End
 		  sr.Bold = bBold
 		  sr.Size = iFontSize
 		  
-		  #if TargetMacOS then
-		    sr.TextColor = if(bGrey, NSColorMBS.secondaryLabelColor.colorValue, NSColorMBS.labelColor.colorValue)
-		    
-		  #elseif TargetWindows then
-		    sr.TextColor = if(bGrey, &c777777, TextColor)
-		    
-		  #endif
+		  //#If TargetMacOS Then
+		  //sr.TextColor = If(bGrey, NSColorMBS.secondaryLabelColor.colorValue, NSColorMBS.labelColor.colorValue)
+		  
+		  //#ElseIf TargetWindows Then
+		  sr.TextColor = If(bGrey, &c777777, TextColor)
+		  
+		  //#endif
 		  
 		  return sr
 		End Function

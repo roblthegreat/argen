@@ -95,6 +95,7 @@ Begin Window winProject
       Scope           =   2
       TabIndex        =   1
       TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   20
       Transparent     =   False
       Value           =   0
@@ -112,6 +113,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   330
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   False
@@ -141,6 +143,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -170,6 +173,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -199,6 +203,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -228,6 +233,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -257,6 +263,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -286,6 +293,7 @@ Begin Window winProject
          HasBackColor    =   False
          Height          =   440
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppMain"
          Left            =   220
          LockBottom      =   True
@@ -362,6 +370,7 @@ Begin Window winProject
       Width           =   16
    End
    Begin BKS_Thread thdLoad
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Priority        =   5

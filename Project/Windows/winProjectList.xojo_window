@@ -789,13 +789,13 @@ End
 		  
 		  // Draw connection
 		  if not me.Selected(row) then
-		    #if TargetMacOS then
-		      g.ForeColor = NSColorMBS.secondaryLabelColor.colorValue
-		      
-		    #else
-		      g.ForeColor = &c666666
-		      
-		    #endif
+		    //#if TargetMacOS then
+		    //g.ForeColor = NSColorMBS.secondaryLabelColor.colorValue
+		    
+		    //#else
+		    g.ForeColor = &c666666
+		    
+		    //#EndIf
 		    
 		  end
 		  

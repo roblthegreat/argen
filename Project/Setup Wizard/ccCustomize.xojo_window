@@ -160,6 +160,7 @@ Begin ContainerControl ccCustomize
       HasBackColor    =   False
       Height          =   24
       HelpTag         =   ""
+      Index           =   -2147483648
       InitialParent   =   ""
       Left            =   0
       LockBottom      =   True
@@ -195,6 +196,7 @@ Begin ContainerControl ccCustomize
       Scope           =   2
       TabIndex        =   5
       TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   32
       Transparent     =   False
       Value           =   0
@@ -247,6 +249,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -276,6 +279,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   234
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -305,6 +309,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   True
@@ -334,6 +339,7 @@ Begin ContainerControl ccCustomize
          HasBackColor    =   False
          Height          =   214
          HelpTag         =   ""
+         Index           =   -2147483648
          InitialParent   =   "ppEditor"
          Left            =   220
          LockBottom      =   False
@@ -613,13 +619,12 @@ End
 		  lbClassTemplate.AddFolder("Shared Properties")
 		  lbClassTemplate.RowTag(lbClassTemplate.LastIndex) = ARProject.CustomizationTemplate.BlockType.SharedProperty
 		  
-		  #if TargetMacOS then
-		    lblNoSelection.TextColor = NSColorMBS.secondaryLabelColor.colorValue
-		    
-		  #elseif TargetWindows then
-		    lblNoSelection.TextColor = &c777777
-		    
-		  #endif
+		  //#If TargetMacOS Then
+		  //lblNoSelection.TextColor = NSColorMBS.secondaryLabelColor.colorValue
+		  
+		  //#ElseIf TargetWindows Then
+		  lblNoSelection.TextColor = &c777777
+		  //#EndIf
 		  
 		  PositionNoSelection
 		  RestoreFolderStates

@@ -63,9 +63,9 @@ Inherits Application
 			var fHelp as FolderItem = SpecialFolder.Resources.Child("Help Book").Child("index.html")
 			
 			if fHelp <> nil and fHelp.Exists = true then
-			#if TargetMacOS then
+			#If TargetMacOS Then
 			// What opens websites?
-			var tsAppPath as String = NSWorkspaceMBS.URLForApplicationToOpenURL("https://strawberrysw.com")
+			Var tsAppPath As String = NSWorkspaceMBS.URLForApplicationToOpenURL("https://strawberrysw.com")
 			
 			// Strip file://
 			tsAppPath = tsAppPath.Right(tsAppPath.Len - 7)
@@ -203,9 +203,9 @@ Inherits Application
 
 	#tag Method, Flags = &h21
 		Private Sub SetupWindowMenu()
-		  #if TargetMacOS then
+		  #If TargetMacOS Then
 		    // Set the Window menu
-		    var oNSMenuItemMaster as new NSMenuItemMBS(mbMain.Handle(MenuItem.HandleType.CocoaNSMenuItem))
+		    Var oNSMenuItemMaster As New NSMenuItemMBS(mbMain.Handle(MenuItem.HandleType.CocoaNSMenuItem))
 		    var mnuMain as NSMenuMBS = oNSMenuItemMaster.submenu
 		    
 		    var iMax as Integer = mnuMain.numberOfItems - 1

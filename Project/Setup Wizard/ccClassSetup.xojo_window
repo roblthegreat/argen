@@ -266,6 +266,7 @@ Begin ContainerControl ccClassSetup
       Width           =   319
    End
    Begin Timer tmrNamingRelay
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Mode            =   0
