@@ -24,7 +24,7 @@ Create classes and code to simplify insertion of ActiveRecord into a Xojo projec
 
 # Modifications
 
-- Version (almost) without plugins, references to Einhugur WindowSplitter removed, instead imSplitter (currently MIT license) is used. 
+- Version (almost) without plugins, references to Einhugur WindowSplitter removed, instead [imSplitter](https://github.com/oleman108/imSplitter) (currently MIT license) is used. 
 MBS plugins not used by default, but if you have a license for MBS plugins, you can set the value of the useMBS constant 
 in the modGlobals module from the default value of 'false' to 'true'.
 - build settings for Linux added
