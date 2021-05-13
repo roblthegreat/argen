@@ -303,6 +303,47 @@ Begin ContainerControl ccClassSetup
       Visible         =   True
       Width           =   178
    End
+   Begin imSplitter imSplitterClassSetup
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      AllowFocusRing  =   True
+      AllowTabs       =   False
+      Backdrop        =   0
+      DockAfter       =   True
+      DockAfterSize   =   40
+      DockBefore      =   True
+      DockBeforeSize  =   40
+      DoubleBuffer    =   False
+      DoubleClickAction=   0
+      DrawHandles     =   True
+      Enabled         =   True
+      HandlesColor    =   &c00000000
+      HasBackColor    =   False
+      Height          =   293
+      Index           =   -2147483648
+      InitialParent   =   ""
+      IsDocked        =   False
+      IsDockedPosition=   ""
+      Left            =   201
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MinAfterArea    =   20
+      MinBeforeArea   =   30
+      PositionBeforeDock=   0
+      Scope           =   0
+      SplitterColor   =   &c00000000
+      TabIndex        =   9
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   30
+      Transparent     =   True
+      Visible         =   True
+      Width           =   15
+   End
 End
 #tag EndWindow
 
@@ -617,6 +658,21 @@ End
 	#tag Event
 		Sub TextChanged()
 		  LoadList
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events imSplitterClassSetup
+	#tag Event
+		Sub Open()
+		  Me.AddControl(lbTables, True)
+		  Me.AddControl(lbProperties, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

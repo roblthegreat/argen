@@ -214,14 +214,12 @@ End
 		Sub Open()
 		  BuildAboutText
 		  
-		  #if TargetWindows then
-		    me.Title = "About " + lblAppName.Text
-		    
-		  #elseif TargetMacOS then
+		  #If TargetMacOS And useMBS Then
 		    // Pretty margins
 		    txtCredits.NSTextViewMBS.textContainerInset = NSMakeSizeMBS(2, 3)
-		    
-		  #endif
+		  #Else
+		    Me.Title = "About " + lblAppName.Text
+		  #EndIf
 		End Sub
 	#tag EndEvent
 
@@ -309,13 +307,13 @@ End
 		  sr.Bold = bBold
 		  sr.Size = iFontSize
 		  
-		  //#If TargetMacOS Then
-		  //sr.TextColor = If(bGrey, NSColorMBS.secondaryLabelColor.colorValue, NSColorMBS.labelColor.colorValue)
-		  
-		  //#ElseIf TargetWindows Then
-		  sr.TextColor = If(bGrey, &c777777, TextColor)
-		  
-		  //#endif
+		  #If TargetMacOS And useMBS Then
+		    sr.TextColor = If(bGrey, NSColorMBS.secondaryLabelColor.colorValue, NSColorMBS.labelColor.colorValue)
+		    
+		  #Else
+		    sr.TextColor = If(bGrey, &c777777, TextColor)
+		    
+		  #EndIf
 		  
 		  return sr
 		End Function

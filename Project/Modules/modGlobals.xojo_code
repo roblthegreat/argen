@@ -628,11 +628,17 @@ Protected Module modGlobals
 	#tag EndProperty
 
 
+	#tag Constant, Name = heightTextFieldLinux, Type = Double, Dynamic = False, Default = \"28", Scope = Public
+	#tag EndConstant
+
 	#tag Constant, Name = kMonospacedFont, Type = String, Dynamic = False, Default = \"Courier New", Scope = Protected
 		#Tag Instance, Platform = Mac OS, Language = Default, Definition  = \"Menlo"
 	#tag EndConstant
 
 	#tag Constant, Name = kUpdatesExpired, Type = String, Dynamic = False, Default = \"The updates period for this license key does not extend to this release of ARGen.", Scope = Protected
+	#tag EndConstant
+
+	#tag Constant, Name = useMBS, Type = Boolean, Dynamic = False, Default = \"false", Scope = Public
 	#tag EndConstant
 
 

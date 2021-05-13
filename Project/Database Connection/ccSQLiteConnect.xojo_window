@@ -32,7 +32,6 @@ Begin ContainerControl ccSQLiteConnect
       Backdrop        =   0
       DoubleBuffer    =   False
       Enabled         =   True
-      EraseBackground =   "True"
       Height          =   145
       HelpTag         =   ""
       Index           =   -2147483648

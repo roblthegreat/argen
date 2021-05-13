@@ -129,10 +129,10 @@ End
 
 	#tag Method, Flags = &h0
 		Sub DeleteEnabled(assigns bValue as Boolean)
-		  #if TargetMacOS then
+		  #If TargetMacOS Then
 		    segOSX.Items(1).Enabled = bValue
 		    
-		  #elseif TargetWindows then
+		  #Else Then
 		    btnRem.Enabled = bValue
 		    
 		  #endif

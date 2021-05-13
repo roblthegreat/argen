@@ -92,13 +92,13 @@ Inherits AlternatingList
 		  End If
 		  
 		  // Alternate color
-		  //#If TargetMacOS Then
-		  //Return NSColorMBS.secondaryLabelColor.colorValue
-		  
-		  //#Else
-		  Return &c666666
-		  
-		  //#endif
+		  #If TargetMacOS And useMBS Then
+		    Return NSColorMBS.secondaryLabelColor.colorValue
+		    
+		  #Else
+		    Return &c666666
+		    
+		  #EndIf
 		End Function
 	#tag EndMethod
 

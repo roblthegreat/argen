@@ -43,6 +43,7 @@ Begin ContainerControl ccUISetup
       Scope           =   2
       TabIndex        =   6
       TabPanelIndex   =   0
+      TabStop         =   True
       Top             =   0
       Transparent     =   False
       Value           =   0
@@ -254,6 +255,7 @@ Begin ContainerControl ccUISetup
       Width           =   20
    End
    Begin Timer tmrReorder
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Mode            =   0
@@ -389,6 +391,47 @@ Begin ContainerControl ccUISetup
       Transparent     =   False
       Visible         =   True
       Width           =   178
+   End
+   Begin imSplitter imSplitterUISetup
+      AllowAutoDeactivate=   True
+      AllowFocus      =   True
+      AllowFocusRing  =   True
+      AllowTabs       =   False
+      Backdrop        =   0
+      DockAfter       =   True
+      DockAfterSize   =   40
+      DockBefore      =   False
+      DockBeforeSize  =   40
+      DoubleBuffer    =   False
+      DoubleClickAction=   0
+      DrawHandles     =   True
+      Enabled         =   True
+      HandlesColor    =   &c00000000
+      HasBackColor    =   False
+      Height          =   289
+      Index           =   -2147483648
+      InitialParent   =   ""
+      IsDocked        =   False
+      IsDockedPosition=   ""
+      Left            =   201
+      LockBottom      =   True
+      LockedInPosition=   False
+      LockLeft        =   True
+      LockRight       =   False
+      LockTop         =   True
+      MinAfterArea    =   20
+      MinBeforeArea   =   30
+      PositionBeforeDock=   0
+      Scope           =   0
+      SplitterColor   =   &c00000000
+      TabIndex        =   9
+      TabPanelIndex   =   0
+      TabStop         =   True
+      Tooltip         =   ""
+      Top             =   30
+      Transparent     =   True
+      Visible         =   True
+      Width           =   15
    End
 End
 #tag EndWindow
@@ -888,6 +931,21 @@ End
 	#tag Event
 		Sub TextChanged()
 		  LoadList
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Opening()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
+		End Sub
+	#tag EndEvent
+#tag EndEvents
+#tag Events imSplitterUISetup
+	#tag Event
+		Sub Open()
+		  Me.AddControl(lbTables, True)
+		  Me.AddControl(ppMain, False)
 		End Sub
 	#tag EndEvent
 #tag EndEvents

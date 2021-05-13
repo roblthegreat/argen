@@ -199,7 +199,7 @@ Begin ContainerControl ccCustomize
       TabStop         =   True
       Top             =   32
       Transparent     =   False
-      Value           =   0
+      Value           =   1
       Visible         =   True
       Width           =   494
       Begin Label lblNoSelection
@@ -619,12 +619,12 @@ End
 		  lbClassTemplate.AddFolder("Shared Properties")
 		  lbClassTemplate.RowTag(lbClassTemplate.LastIndex) = ARProject.CustomizationTemplate.BlockType.SharedProperty
 		  
-		  //#If TargetMacOS Then
-		  //lblNoSelection.TextColor = NSColorMBS.secondaryLabelColor.colorValue
-		  
-		  //#ElseIf TargetWindows Then
-		  lblNoSelection.TextColor = &c777777
-		  //#EndIf
+		  #If TargetMacOS And useMBS Then
+		    lblNoSelection.TextColor = NSColorMBS.secondaryLabelColor.colorValue
+		    
+		  #Else Then
+		    lblNoSelection.TextColor = &c777777
+		  #EndIf
 		  
 		  PositionNoSelection
 		  RestoreFolderStates

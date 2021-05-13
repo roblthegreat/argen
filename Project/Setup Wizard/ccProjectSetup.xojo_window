@@ -795,6 +795,13 @@ End
 		  end
 		End Sub
 	#tag EndEvent
+	#tag Event
+		Sub Open()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
+		End Sub
+	#tag EndEvent
 #tag EndEvents
 #tag Events txtAppName
 	#tag Event
@@ -804,6 +811,13 @@ End
 		    self.TrueWindow.ContentsChanged = true
 		    
 		  end
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Open()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
 		End Sub
 	#tag EndEvent
 #tag EndEvents
@@ -817,6 +831,13 @@ End
 		  end
 		End Sub
 	#tag EndEvent
+	#tag Event
+		Sub Open()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
+		End Sub
+	#tag EndEvent
 #tag EndEvents
 #tag Events txtBundleID
 	#tag Event
@@ -826,6 +847,13 @@ End
 		    self.TrueWindow.ContentsChanged = true
 		    
 		  end
+		End Sub
+	#tag EndEvent
+	#tag Event
+		Sub Open()
+		  #If TargetLinux Then
+		    Me.Height = heightTextFieldLinux
+		  #EndIf
 		End Sub
 	#tag EndEvent
 #tag EndEvents

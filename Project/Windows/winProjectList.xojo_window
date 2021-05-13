@@ -789,20 +789,20 @@ End
 		  
 		  // Draw connection
 		  if not me.Selected(row) then
-		    //#if TargetMacOS then
-		    //g.ForeColor = NSColorMBS.secondaryLabelColor.colorValue
+		    #If TargetMacOS And useMBS Then
+		      g.ForeColor = NSColorMBS.secondaryLabelColor.colorValue
+		      
+		    #Else
+		      g.ForeColor = &c666666
+		      
+		    #EndIf
 		    
-		    //#else
-		    g.ForeColor = &c666666
-		    
-		    //#EndIf
-		    
-		  end
+		  End
 		  
 		  g.TextSize = 11
 		  g.DrawString(tsConnection, toIcon.Left + toIcon.Width + 12, 32)
 		  
-		  return true
+		  Return True
 		End Function
 	#tag EndEvent
 	#tag Event

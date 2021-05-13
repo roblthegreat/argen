@@ -456,7 +456,6 @@ Begin ContainerControl ccServerConnect
       Backdrop        =   0
       DoubleBuffer    =   False
       Enabled         =   True
-      EraseBackground =   "True"
       Height          =   35
       HelpTag         =   ""
       Index           =   -2147483648

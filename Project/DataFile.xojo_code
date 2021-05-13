@@ -2,7 +2,7 @@
 Protected Module DataFile
 	#tag Method, Flags = &h1
 		Protected Sub CloseDB()
-		  if DB <> nil then
+		  If DB <> Nil Then
 		    DB.Close
 		    DB = nil
 		    

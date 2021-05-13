@@ -44,22 +44,22 @@ Protected Module BKS_FolderItemExtends
 
 	#tag Method, Flags = &h0
 		Sub ShowOnDisk(extends f as FolderItem)
-		  if not f.Exists then
-		    return
-		  end if
+		  If Not f.Exists Then
+		    Return
+		  End If
 		  
-		  #if TargetMacOS then
+		  #If TargetMacOS Then
 		    Declare Function selectFile Lib "AppKit" selector "selectFile:inFileViewerRootedAtPath:"(obj As Ptr, fPath As CFStringRef, rootFullPath As CFStringRef) As Boolean
 		    Declare Function objc_getClass Lib "Cocoa"(name As CString) As Ptr
 		    Declare Function sharedWorkspace Lib "AppKit" selector "sharedWorkspace"(obj As Ptr) As Ptr
-		    var swrkspace As Ptr = sharedWorkspace(objc_getClass("NSWorkspace"))
+		    Var swrkspace As Ptr = sharedWorkspace(objc_getClass("NSWorkspace"))
 		    Call selectFile(swrkspace, f.NativePath, "")
 		    
-		  #elseif TargetWin32 then
-		    var o as new Shell
+		  #ElseIf TargetWin32 Then
+		    Var o As New Shell
 		    o.Execute( "explorer.exe", "/select," + f.ShellPath )
 		    
-		  #endif
+		  #EndIf
 		End Sub
 	#tag EndMethod
 

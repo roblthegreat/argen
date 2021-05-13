@@ -63,7 +63,7 @@ Inherits Application
 			var fHelp as FolderItem = SpecialFolder.Resources.Child("Help Book").Child("index.html")
 			
 			if fHelp <> nil and fHelp.Exists = true then
-			#If TargetMacOS Then
+			#If TargetMacOS And useMBS Then
 			// What opens websites?
 			Var tsAppPath As String = NSWorkspaceMBS.URLForApplicationToOpenURL("https://strawberrysw.com")
 			
@@ -144,7 +144,7 @@ Inherits Application
 		  #elseif TargetWin32 then
 		    return SpecialFolder.ApplicationData.Child(sIdentifier)
 		    
-		  #elseif TargetLinux then
+		  #ElseIf TargetLinux Then
 		    return SpecialFolder.ApplicationData.Child("." + sIdentifier)
 		    
 		  #endif
@@ -203,31 +203,32 @@ Inherits Application
 
 	#tag Method, Flags = &h21
 		Private Sub SetupWindowMenu()
-		  #If TargetMacOS Then
+		  
+		  #If TargetMacOS And useMBS Then
 		    // Set the Window menu
 		    Var oNSMenuItemMaster As New NSMenuItemMBS(mbMain.Handle(MenuItem.HandleType.CocoaNSMenuItem))
-		    var mnuMain as NSMenuMBS = oNSMenuItemMaster.submenu
+		    Var mnuMain As NSMenuMBS = oNSMenuItemMaster.submenu
 		    
-		    var iMax as Integer = mnuMain.numberOfItems - 1
-		    for i as Integer = 0 to iMax
-		      var oThisItem as NSMenuItemMBS = mnuMain.Item(i)
-		      if oThisItem.Title = "Window" and oThisItem.hasSubmenu = true then
-		        var mnuWindow as NSMenuMBS = oThisItem.submenu
-		        if mnuWindow <> nil then
+		    Var iMax As Integer = mnuMain.numberOfItems - 1
+		    For i As Integer = 0 To iMax
+		      Var oThisItem As NSMenuItemMBS = mnuMain.Item(i)
+		      If oThisItem.Title = "Window" And oThisItem.hasSubmenu = True Then
+		        Var mnuWindow As NSMenuMBS = oThisItem.submenu
+		        If mnuWindow <> Nil Then
 		          NSApplicationMBS.sharedApplication.windowsMenu = mnuWindow
 		          
-		        end
+		        End
 		        
-		        exit for i
+		        Exit For i
 		        
-		      end
+		      End
 		      
-		    next i
+		    Next i
 		    
 		    // File menu is empty, Quit is in the App menu
 		    mbMain.Child("FileMenu").Close
 		    
-		  #endif
+		  #EndIf
 		End Sub
 	#tag EndMethod
 
@@ -258,6 +259,13 @@ Inherits Application
 		  return sVersion
 		End Function
 	#tag EndMethod
+
+
+	#tag Note, Name = useMBS_const
+		If you have a license for MBS plugins, you can set the value of the useMBS constant 
+		in the modGlobals module from the default value of 'false' to 'true'.
+		
+	#tag EndNote
 
 
 	#tag Constant, Name = kEditClear, Type = String, Dynamic = False, Default = \"&Delete", Scope = Public
