@@ -145,6 +145,7 @@ Begin ContainerControl ccReviewGenerate
       Width           =   140
    End
    Begin Timer tmrGenerateRelay
+      Enabled         =   True
       Index           =   -2147483648
       LockedInPosition=   False
       Mode            =   0

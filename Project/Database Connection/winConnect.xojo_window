@@ -43,7 +43,7 @@ Begin Window winConnect
       Scope           =   2
       TabIndex        =   6
       TabPanelIndex   =   0
-      TabStop         =   True
+      TabStop         =   "True"
       Top             =   12
       Transparent     =   False
       Value           =   0

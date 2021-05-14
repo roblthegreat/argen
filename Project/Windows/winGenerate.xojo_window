@@ -77,7 +77,7 @@ Begin Window winGenerate
       Scope           =   2
       TabIndex        =   1
       TabPanelIndex   =   0
-      TabStop         =   True
+      TabStop         =   "True"
       Top             =   37
       Transparent     =   False
       Value           =   100.0
@@ -159,10 +159,10 @@ End
 		  
 		  #If TargetWindows Then
 		    muiWindowsHandle = toAttach.Handle
-		    If useMBS Then
+		    #If useMBS Then
 		      moWindowsTaskBar = New WindowsTaskbarListMBS
 		      moWindowsTaskBar.SetProgressState(muiWindowsHandle, WindowsTaskbarListMBS.ProgressStateFlagNormal)
-		    End If
+		    #EndIf
 		    
 		  #endif
 		  

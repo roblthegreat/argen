@@ -106,7 +106,7 @@ Begin ContainerControl ListSegment
       SelectionType   =   2
       TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   True
+      TabStop         =   "True"
       Top             =   0
       Transparent     =   False
       Visible         =   False

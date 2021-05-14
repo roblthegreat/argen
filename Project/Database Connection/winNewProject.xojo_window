@@ -43,7 +43,7 @@ Begin Window winNewProject
       Scope           =   2
       TabIndex        =   2
       TabPanelIndex   =   0
-      TabStop         =   True
+      TabStop         =   "True"
       Top             =   20
       Transparent     =   False
       Value           =   0
