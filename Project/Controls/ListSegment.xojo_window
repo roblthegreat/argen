@@ -132,7 +132,7 @@ End
 		  #If TargetMacOS Then
 		    segOSX.Items(1).Enabled = bValue
 		    
-		  #Else Then
+		  #Else
 		    btnRem.Enabled = bValue
 		    
 		  #endif
